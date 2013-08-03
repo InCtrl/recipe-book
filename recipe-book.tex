@@ -1,0 +1,100 @@
+\documentclass{report}
+
+\usepackage{makeidx}
+\usepackage{newclude}
+\usepackage{multicol} %breaks lists into multiple columns
+\usepackage{hyperref}
+
+\makeindex
+\setcounter{tocdepth}{1} %hide subsections
+
+\begin{document}
+
+    \tableofcontents
+
+    %%%%%%%%%%%%%%%%%
+    \chapter{Appetizers}\index{appetizers}
+
+    \include*{appetizers/mozzarella-sticks}
+
+    %%%%%%%%%%%%%%%%%
+    \chapter{Condiments}\index{condiments}
+
+    \include*{condiments/mexican-crema}
+    \include*{condiments/simple-syrup}
+
+    %%%%%%%%%%%%%%%%%
+    \chapter{Cocktails}\index{cocktails}
+
+    \include*{cocktails/mint-julep}
+    \include*{cocktails/whiskey-sour}
+
+    %%%%%%%%%%%%%%%%%
+    \chapter{Game}\index{game}
+
+    \include*{game/grilled-venison-tenderloin}
+
+    %%%%%%%%%%%%%%%%%
+    \chapter{Meat}\index{meat}
+
+    \include*{meat/best-chili}
+    \include*{meat/onion-pepper-round-steak}
+    \include*{condiments/emeril-essence-creole}
+    \include*{meat/stuffed-peppers-melissa}
+    \include*{meat/thai-meat-jerky}
+
+    %%%%%%%%%%%%%%%%%
+    \chapter{Pasta}\index{pasta}
+
+    \include*{pasta/best-mac-and-cheese}
+    \include*{pasta/santa-fe-mac-and-cheese}
+    \include*{pasta/southwest-mac-and-cheese}
+
+    %%%%%%%%%%%%%%%%%
+    \chapter{Poultry}\index{poultry}
+
+    \include*{poultry/chicken-parm}
+    \include*{poultry/chicken-spinach-couscous}
+
+    %%%%%%%%%%%%%%%%%
+    \chapter{Sauces}\index{sauces}
+    
+    \include*{sauces/pizza-sauce}
+
+    %%%%%%%%%%%%%%%%%
+    \chapter{Seafood}\index{seafood}
+
+    \include*{seafood/roasted-white-fish}
+    \include*{seafood/shrimp-mozambique}
+    \include*{seafood/shrimp-and-lemon-cream-pasta}
+    \include*{seafood/shrimp-pasta-in-tomato-chilie-sauce}
+    \include*{seafood/shrimp-scampi}
+
+    %%%%%%%%%%%%%%%%%
+    \chapter{Vegetables}\index{vegetables}
+    \include*{veg/cilantro-rice}
+    \include*{veg/fried-zucchini}
+    \include*{veg/mushroom-green-onion-broccolini-stirfry}
+    \include*{veg/roasted-carrots}
+    \include*{veg/rosemary-oven-fries}
+    \include*{veg/veggie-shep-pie}
+    \include*{veg/zucchini-chips}
+
+    %%%%%%%%%%%%%%%%%
+    %index references (e.g., see another entry)
+    \index{carrots|see{vegetables}}
+    \index{chicken|see{poultry}}
+    \index{fish|see{seafood}}
+    \index{potatoes|see{vegetables}}
+    \index{rice|see{grains}}
+    \index{shrimp|see{seafood}}
+    \index{steak|see{meat}}
+
+
+    %%%%%%%%%%%%%%%%%
+    %manually add index to toc
+    \clearpage
+    \addcontentsline{toc}{chapter}{Index}
+    \printindex
+
+\end{document}
