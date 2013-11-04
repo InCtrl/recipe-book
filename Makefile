@@ -1,4 +1,5 @@
 SRCS=recipe-book.tex
+VPATH=appetizers cocktails condiments desserts game meat pasta poultry sauces seafood veg
 #NAME=McGill-PCA-Draft.pdf
 
 all: manuscript
@@ -33,3 +34,4 @@ clean:
 clean_all:
 	rm -f *~ *.aux *.bbl *.toc *.lof *.log *.lot *.out *.blg *.spl *.idx *.ilg *.ind
 	#rm -f $(SRCS:.tex=.pdf) *~ *.aux *.bbl *.toc *.lof *.log *.lot *.out *.blg *.spl *.idx *.ilg *.ind
+	$(foreach var,$(VPATH),rm -f $(var)/*~;)
