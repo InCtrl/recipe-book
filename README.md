@@ -14,7 +14,10 @@ Other systems:
 Run the following sequence of commands with your favorite LaTeX distribution
 
 pdflatex recipe-book.tex
+
 makeindex recipe-book
+
 pdflatex recipe-book.tex
+
 pdflatex recipe-book.tex
 
