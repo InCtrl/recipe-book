@@ -32,6 +32,7 @@ clean:
 	rm -f *~
 
 clean_all:
+	latexmk -c
 	rm -f *~ *.aux *.bbl *.toc *.lof *.log *.lot *.out *.blg *.spl *.idx *.ilg *.ind
 	#rm -f $(SRCS:.tex=.pdf) *~ *.aux *.bbl *.toc *.lof *.log *.lot *.out *.blg *.spl *.idx *.ilg *.ind
 	$(foreach var,$(VPATH),rm -f $(var)/*~;)
